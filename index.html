@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roulette Dice // These dices are lethal!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Lato&family=Montserrat:wght@500;600;700;900&family=Playfair+Display+SC&family=Playpen+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Lato&family=Montserrat:wght@500;600;700;900&family=Playfair+Display+SC&family=Playpen+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+
+  <body>
+    <audio id="theme-audio">
+      <source src="./sounds/The Dark Side Of The Moon.mp3" />
+    </audio>
+    <audio id="selecting-audio" preload="none">
+      <source src="./sounds/clickselect2-92097.mp3" />
+    </audio>
+    <audio id="strategy-audio" preload="none">
+      <source src="./sounds/click-21156.mp3" />
+    </audio>
+    <audio id="starting-audio" preload="none">
+      <source src="./sounds/game-start-6104.mp3" />
+    </audio>
+    <audio id="shooting-audio" preload="none">
+      <source
+        src="./sounds/12-Gauge-Pump-Action-Shotgun-Close-Gunshot-A-www.fesliyanstudios.com.mp3"
+      />
+    </audio>
+    <audio id="empty-gun-audio" preload="none">
+      <source src="./sounds/empty-gun-shot-6209.mp3" />
+    </audio>
+    <audio id="safety-audio" preload="none">
+      <source src="./sounds/revolvercock1-6924.mp3" />
+    </audio>
+    <audio id="dice-audio" preload="none">
+      <source src="./sounds/dice-sound.mp3" />
+    </audio>
+
+    <section class="game__container-opening">
+      <div class="game__homepage" id="homepage">
+        <h1 class="heading heading--primary appearing">Roulette Dice</h1>
+        <h2 class="heading heading--secondary appearing">
+          These dices are lethal!
+        </h2>
+        <a href="#start" class="btn btn__homepage btn-start">start game</a>
+        <a href="#popup" class="btn btn__homepage btn-strategy"
+          >game strategy</a
+        >
+      </div>
+
+      <div class="homepage__popup" id="popup">
+        <div class="popup__content">
+          <a href="#homepage" class="btn btn-close">&times;</a>
+          <button class="btn btn-translate">En</button>
+          <h2 class="heading heading--secondary">how to play this game!</h2>
+          <p class="popup__detail">
+            This game is a combination of Russian roulette and dice. Each player
+            has three chances to roll their dice. If the sum of the numbers of
+            two dice equals eight, you can shoot the opponent. If you are lucky
+            and the gun fires, you will get shooting points in addition to the
+            dice points, and if the gun is empty, you will only get the dice
+            points. The player who has 100% damage loses. Also, when the game
+            time ends, the player with the least damage wins!
+            <span class="popup__detail--primary">good luck!</span>
+          </p>
+        </div>
+      </div>
+      <div class="starting-timer hidden">&nbsp;</div>
+    </section>
+
+    <section class="game__container-main hidden" id="start">
+      <div class="game__content">
+        <div class="timer__container">
+          <p class="timer">5:00</p>
+        </div>
+        <div class="player player--0 player--active">
+          <h2 class="player__title">player 1</h2>
+          <div class="damage__container">
+            <div class="damage__bar">
+              <div id="damage--0">&nbsp;</div>
+            </div>
+            <p>Damage</p>
+          </div>
+          <div class="player-score">
+            <h3><span>💰</span>money earned<span>💰</span></h3>
+            <div class="score">
+              <span class="score__text" id="score--0">100</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="player player--1">
+          <h2 class="player__title">player 2</h2>
+          <div class="damage__container">
+            <div class="damage__bar">
+              <div id="damage--1">&nbsp;</div>
+            </div>
+            <p>Damage</p>
+          </div>
+          <div class="player-score">
+            <h3><span>💰</span>money earned<span>💰</span></h3>
+            <div class="score">
+              <span class="score__text" id="score--1">100</span>
+            </div>
+          </div>
+        </div>
+        <div class="rolling-chance">&nbsp;</div>
+        <div class="game__tools">
+          <div class="dices__container">
+            <div class="dice dice--1">
+              <img
+                src="/img/dice-six-faces-5.png"
+                alt="dice number 1"
+                id="dice1"
+              />
+            </div>
+            <div class="dice dice--2">
+              <img
+                src="/img/dice-six-faces-3.png"
+                alt="dice number 1"
+                id="dice2"
+              />
+            </div>
+          </div>
+          <div class="gun__container">
+            <div class="gun-box">
+              <img src="/img/right-gun.png" alt="a classic gun" class="gun" />
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-act btn-roll">roll dices</button>
+        <button type="button" class="btn btn-act btn-shoot">Shoot!</button>
+        <button type="button" class="btn btn-act btn-reset hidden">
+          Start New Game!
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
