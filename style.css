@@ -9,7 +9,7 @@
   list-style: none;
 }
 
-/*///////////////////////////////Variables/////*/
+/*/ //////////////////////////////Variables/////*/
 
 :root {
   --radial-gradient: radial-gradient(
@@ -180,7 +180,7 @@
   }
 }
 
-/*///////////////////////////General styling/////////////////// */
+/*/ //////////////////////////General styling/////////////////// */
 
 html {
   font-size: 62.5%;
@@ -235,7 +235,7 @@ img {
   animation: appearing 4s ease-in;
 }
 
-/*//////////////////////////////Buttons Styling//////////////////*/
+/*/ /////////////////////////////Buttons Styling//////////////////*/
 
 a.btn:link,
 a.btn:visited {
@@ -364,7 +364,7 @@ a.btn:visited {
   text-align: center;
 }
 
-/*/////////////////////// Game Homepage styles///////////////////*/
+/*/ ////////////////////// Game Homepage styles///////////////////*/
 
 .game__container-opening > * {
   position: absolute;
@@ -447,7 +447,7 @@ a.btn:visited {
   align-items: center;
 }
 
-/*//////////////////////////////// Headings Styling ////////////*/
+/*/ /////////////////////////////// Headings Styling ////////////*/
 
 .player__title {
   font-size: 3rem;
@@ -466,6 +466,7 @@ a.btn:visited {
 
 .game__content {
   width: 70%;
+  max-width: 1200px;
   height: 50rem;
   display: flex;
   background-color: red;
@@ -475,7 +476,7 @@ a.btn:visited {
   animation: scaling 2s ease;
 }
 
-/*//////////////////////Timer////////////////////////////////////////*/
+/*/ /////////////////////Timer////////////////////////////////////////*/
 
 .timer__container {
   width: 17%;
@@ -526,7 +527,7 @@ a.btn:visited {
   animation: color 2s ease-in infinite;
 }
 
-/*////////////////////// Damage styles///////////////////*/
+/*/ ///////////////////// Damage styles///////////////////*/
 
 .damage__container {
   width: 50%;
@@ -536,7 +537,6 @@ a.btn:visited {
   width: 100%;
   border: 1px solid var(--clr-primary);
   border-radius: 5px;
-  width: 100%;
 }
 
 .damage__bar > * {
@@ -582,7 +582,7 @@ a.btn:visited {
   box-shadow: var(--box-shadow-main);
 }
 
-/*////////////////////// Game Images styles//////////////////////*/
+/*/ ///////////////////// Game Images styles//////////////////////*/
 
 .dice {
   width: 4rem;
@@ -677,7 +677,171 @@ a.btn:visited {
 }
 
 /* /////////////////////////////////////Media queries */
-@media (max-width: 500px) {
+
+@media (max-width: 1328px) {
+  /* تنظیمات تصاویر و ابزارها */
+  .game__tools {
+    width: 12rem;
+    height: 12rem;
+    top: 35%;
+  }
+
+  .dice {
+    width: 2.5rem;
+  }
+
+  .gun {
+    width: 6rem;
+    top: 15%;
+  }
+
+  .rolling-chance {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.3rem;
+    top: 10%;
+  }
+
+  /* تنظیمات نوار آسیب و امتیاز */
+  .damage__container {
+    width: 70%;
+  }
+
+  .score {
+    width: 90%;
+  }
+
+  /* تنظیمات فاصله‌ها */
+  .game__content {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .btn-shoot,
+  .btn-reset {
+    bottom: 6%;
+  }
+  .game__tools {
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+}
+
+@media (max-width: 1000px) {
+  /* تنظیمات تصاویر و ابزارها */
+  .game__tools {
+    width: 12rem;
+    height: 12rem;
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+
+  .dice {
+    width: 2.5rem;
+  }
+
+  .gun {
+    width: 6rem;
+    top: 15%;
+  }
+
+  .rolling-chance {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.3rem;
+    top: 10%;
+  }
+
+  /* تنظیمات نوار آسیب و امتیاز */
+  .damage__container {
+    width: 60%;
+  }
+
+  .score {
+    width: 90%;
+  }
+
+  /* تنظیمات فاصله‌ها */
+  .game__content {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .btn-shoot,
+  .btn-reset {
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 748px) {
+  /* تنظیمات تصاویر و ابزارها */
+  .game__tools {
+    width: 12rem;
+    height: 12rem;
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+
+  .dice {
+    width: 2.5rem;
+  }
+
+  .gun {
+    width: 5rem;
+    top: 20%;
+  }
+
+  .rolling-chance {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.3rem;
+    top: 10%;
+  }
+
+  /* تنظیمات نوار آسیب و امتیاز */
+  .damage__container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .damage__bar {
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid var(--clr-primary);
+    border-radius: 100%;
+  }
+
+  .damage__bar > * {
+    background-image: linear-gradient(
+      to right,
+      var(--clr-primary),
+      var(--clr-red)
+    );
+
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+
+  .score {
+    width: 90%;
+  }
+
+  /* تنظیمات فاصله‌ها */
+  .game__content {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .btn-shoot,
+  .btn-reset {
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 560px) {
   html {
     font-size: 45%;
   }
@@ -781,12 +945,18 @@ a.btn:visited {
   }
 
   .btn-shoot,
-  .btn-reset,
-  .btn-roll {
-    bottom: 3%;
+  .btn-reset {
+    bottom: 6%;
   }
 
   .btn-roll {
-    bottom: 10%;
+    bottom: 15%;
   }
+}
+
+.btn-ai-turn {
+  opacity: 0.2 !important;
+  cursor: not-allowed !important;
+  transform: translateX(-50%) scale(0.9) !important;
+  transition: all 0.3s ease !important;
 }
