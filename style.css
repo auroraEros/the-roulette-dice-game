@@ -800,18 +800,13 @@ a.btn:visited {
 
   /* تنظیمات نوار آسیب و امتیاز */
   .damage__container {
-    width: 60%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .damage__bar {
-    width: 8rem;
-    height: 8rem;
-    border: 1px solid var(--clr-primary);
-    border-radius: 100%;
-  }
+
 
   .damage__bar > * {
     background-image: linear-gradient(
@@ -820,13 +815,14 @@ a.btn:visited {
       var(--clr-red)
     );
 
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
+   
   }
 
+  .money{
+   font-size: 1rem;
+  }
   .score {
-    width: 90%;
+    width: 60%;
   }
 
   /* تنظیمات فاصله‌ها */
@@ -918,13 +914,9 @@ a.btn:visited {
   }
 
   /* تنظیمات نوار آسیب و امتیاز */
-  .damage__container {
-    width: 90%;
-  }
 
-  .score {
-    width: 90%;
-  }
+
+
 
   .player--active h2 {
     font-size: 2rem;
